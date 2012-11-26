@@ -1,0 +1,26 @@
+{
+  "name": "razorjs",
+  "author": {
+    "name": "Markus Ast",
+    "email": "npm.m@rkusa.st"
+  },
+  "version": "0.1.0",
+  "main": "lib/razorjs",
+  "homepage": "https://github.com/rkusa/razorjs",
+  "scripts": {
+    "test": "mocha",
+    "release": "pegjs lib/parser/razorjs.pegjs"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "1.5.x",
+    "should": "1.2.x",
+    "pegjs": "0.7.x"
+  },
+  "bugs": "https://github.com/rkusa/razorjs/issues",
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/rkusa/razorjs.git"
+  }
+}

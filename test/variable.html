@@ -1,0 +1,15 @@
+<h1>@title</h1>
+
+<code>
+  <pre>
+    function() {
+      _buf = [];
+      with(this) {
+        _buf.push("&lt;h1&gt;");
+        _buf.push(title);
+        _buf.push("&lt;/h1&gt;");
+      }
+      return _buf.join("");
+    }
+  </pre>
+</code>

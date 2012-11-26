@@ -1,0 +1,31 @@
+<ul>
+  @todos.forEach(function(todo) {
+    <li>@todo.task</li>
+  })
+</ul>
+
+<code>
+  <pre>
+    function() {
+      _buf = [];
+      with(this) {
+        _buf.push("<ul>");
+        buf.push(todos.forEach(
+          function(
+            todo
+          ) {
+            _buf = [];
+            with(this) {
+              _buf.push("    <li>");
+              _buf.push(todo.task);
+              _buf.push("</li>");
+            }
+            return _buf.join("");
+          }
+        ))
+        _buf.push("</ul>");
+      }
+      return _buf.join("");
+    }
+  </pre>
+</code>

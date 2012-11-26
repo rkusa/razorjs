@@ -1,0 +1,29 @@
+<div>
+  @if (((isBoolean === (foo ? 1 : 0)) && str === 'string') && foobar(1, 2) || (function(){
+      Boohja
+    }())) {
+    YEAH!
+  }
+</div>
+
+<code>
+  <pre>
+    function() {
+      _buf = [];
+      with(this) {
+        _buf.push("<div>");
+        if(
+          ((isBoolean === (foo ? 1 : 0))&& str === 'string')
+          && foobar
+            (1, 2)
+          || 
+          (function() {_buf = [];with(this) {_buf.push("      Boohja");}return _buf.join("");}())
+        ) {
+          _buf.push("    YEAH!");
+        }
+        _buf.push("</div>");
+      }
+      return _buf.join("");
+    }
+  </pre>
+</code>

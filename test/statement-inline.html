@@ -1,0 +1,15 @@
+<input type="checkbox" @(isChecked? 'checked' : '')>
+
+<code>
+  <pre>
+    function() {
+      _buf = [];
+      with(this) {
+        _buf.push("<input type=\"checkbox\" ");
+        buf.push(isChecked? 'checked' : '');
+        _buf.push(">");
+      }
+      return _buf.join("");
+    }
+  </pre>
+</code>

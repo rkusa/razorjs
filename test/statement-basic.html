@@ -1,0 +1,23 @@
+<div>
+  @if (isBoolean === true && str === 'string') {
+    YEAH!
+  }
+</div>
+
+<code>
+  <pre>
+    function() {
+      _buf = [];
+      with(this) {
+        _buf.push("&lt;div&gt;");
+        if(
+          isBoolean === true && str === 'string'
+        ) {
+          _buf.push("    YEAH!");
+        }
+        _buf.push("&lt;/div&gt;");
+      }
+      return _buf.join("");
+    }
+  </pre>
+</code>
