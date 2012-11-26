@@ -2,14 +2,12 @@
 
 <code>
   <pre>
-    function() {
-      _buf = [];
-      with(this) {
-        _buf.push("&lt;h1&gt;");
-        _buf.push(title);
-        _buf.push("&lt;/h1&gt;");
-      }
-      return _buf.join("");
+    var _b = [];
+    with(_s) {
+      _b.push("&lt;h1&gt;");
+      _b.push(title);
+      _b.push("&lt;/h1&gt;");
     }
+    return _b.join("");
   </pre>
 </code>

@@ -6,26 +6,24 @@
 
 <code>
   <pre>
-    function() {
-      _buf = [];
-      with(this) {
-        _buf.push("<ul>");
-        buf.push(todos.forEach(
-          function(
-            todo
-          ) {
-            _buf = [];
-            with(this) {
-              _buf.push("    <li>");
-              _buf.push(todo.task);
-              _buf.push("</li>");
-            }
-            return _buf.join("");
+    var _b = [];
+    with(_s) {
+      _b.push("<ul>");
+      _b.push(todos.forEach(
+        function(
+          todo
+        ) {
+          var _b = [];
+          with(_s) {
+            _b.push("    <li>");
+            _b.push(todo.task);
+            _b.push("</li>");
           }
-        ))
-        _buf.push("</ul>");
-      }
-      return _buf.join("");
+          return _b.join("");
+        }
+      ));
+      _b.push("</ul>");
     }
+    return _b.join("");
   </pre>
 </code>

@@ -8,22 +8,20 @@
 
 <code>
   <pre>
-    function() {
-      _buf = [];
-      with(this) {
-        _buf.push("<div>");
-        if(
-          ((isBoolean === (foo ? 1 : 0))&& str === 'string')
-          && foobar
-            (1, 2)
-          || 
-          (function() {_buf = [];with(this) {_buf.push("      Boohja");}return _buf.join("");}())
-        ) {
-          _buf.push("    YEAH!");
-        }
-        _buf.push("</div>");
+    var _b = [];
+    with(_s) {
+      _b.push("<div>");
+      if(
+        ((isBoolean === (foo ? 1 : 0))&& str === 'string')
+        && foobar
+          (1,2)
+        || 
+        (function() {var _b = [];with(_s) {_b.push("      Boohja");}return _b.join("");}())
+      ) {
+        _b.push("    YEAH!");
       }
-      return _buf.join("");
+      _b.push("</div>");
     }
+    return _b.join("");
   </pre>
 </code>

@@ -6,18 +6,16 @@
 
 <code>
   <pre>
-    function() {
-      _buf = [];
-      with(this) {
-        _buf.push("&lt;div&gt;");
-        if(
-          isBoolean === true && str === 'string'
-        ) {
-          _buf.push("    YEAH!");
-        }
-        _buf.push("&lt;/div&gt;");
+    var _b = [];
+    with(_s) {
+      _b.push("&lt;div&gt;");
+      if(
+        isBoolean === true && str === 'string'
+      ) {
+        _b.push("    YEAH!");
       }
-      return _buf.join("");
+      _b.push("&lt;/div&gt;");
     }
+    return _b.join("");
   </pre>
 </code>
