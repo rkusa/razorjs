@@ -1,7 +1,7 @@
 var fs = require('fs')
   , should = require('should')
   , pegjs = require('pegjs')
-  , parser = pegjs.buildParser(fs.readFileSync(__dirname + '/../lib/parser/razorjs.pegjs', 'utf-8'));
+  , parser = pegjs.buildParser(fs.readFileSync(__dirname + '/../lib/parser/razorjs.pegjs', 'utf-8'))
 
 describe('RazorJs', function() {
   var files = fs.readdirSync(__dirname)
