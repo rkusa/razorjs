@@ -1,0 +1,13 @@
+<span>@{isDone ? a : b}</span>
+
+<code>
+  <pre>
+    var _b = [];
+    with(_s) {
+      _b.push("<span>");
+      {"inline":"isDone ? a : b"}
+      _b.push("</span>");
+    }
+    return _b.join("");
+  </pre>
+</code>
