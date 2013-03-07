@@ -32,7 +32,7 @@ describe('RazorJs', function() {
       // console.log(parsed)
       
       for (var i = 0; i < expected.length; ++i)
-        expected[i].should.equal(parsed[i])
+        expected[i].should.equal(typeof parsed[i] === 'string' ? parsed[i] : JSON.stringify(parsed[i]))
       expected.should.have.lengthOf(parsed.length)
     })
   })

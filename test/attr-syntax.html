@@ -1,0 +1,15 @@
+<div @id="foo" @class="isDone ? 'selected' : ''"></div>
+
+<code>
+  <pre>
+    var _b = [];
+    with(_s) {
+      _b.push("<div ");
+      {"attr":{"name":"id","value":"foo"}}
+      _b.push(" ");
+      {"attr":{"name":"class","value":"isDone ? 'selected' : ''"}}
+      _b.push("></div>");
+    }
+    return _b.join("");
+  </pre>
+</code>
