@@ -1,0 +1,46 @@
+<div>
+  @items.filter(function(i) { return i.position < item.position }).map(function(i) { return i.getTotal() }).reduce(function(lhs, rhs) { return lhs + rhs })
+</div>
+
+<code>
+  <pre>
+    var _b = [];
+    with(_s) {
+      _b.push("<div>");
+      _b.push(items.filter(
+          function(
+            i
+          ) {
+            return (function inner() {
+              Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
+              return i.position < item.position 
+            }).call(this)
+          }
+        ).
+        map(
+          function(
+            i
+          ) {
+            return (function inner() {
+              Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
+              return i.getTotal() 
+            }).call(this)
+          }
+        ).
+        reduce(
+          function(
+            lhs
+            ,
+            rhs
+          ) {
+            return (function inner() {
+              Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
+              return lhs + rhs 
+            }).call(this)
+          }
+      ));
+      _b.push("</div>");
+    }
+    return _b.join("");
+  </pre>
+</code>
