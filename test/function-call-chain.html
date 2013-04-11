@@ -13,7 +13,9 @@
           ) {
             return (function inner() {
               Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-              return i.position < item.position 
+              with(this) {
+                return i.position < item.position 
+              }
             }).call(this)
           }
         ).
@@ -23,7 +25,9 @@
           ) {
             return (function inner() {
               Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-              return i.getTotal() 
+              with(this) {
+                return i.getTotal() 
+              }
             }).call(this)
           }
         ).
@@ -35,7 +39,9 @@
           ) {
             return (function inner() {
               Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-              return lhs + rhs 
+              with(this) {
+                return lhs + rhs 
+              }
             }).call(this)
           }
       ));
