@@ -4,49 +4,52 @@
 
 <code>
   <pre>
-    var _b = [];
-    with(_s) {
-      _b.push("<div>");
-      _b.push(items.filter(
-          function(
-            i
-          ) {
-            return (function inner() {
-              Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-              with(this) {
-                return i.position < item.position 
-              }
-            }).call(this)
-          }
-        ).
-        map(
-          function(
-            i
-          ) {
-            return (function inner() {
-              Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-              with(this) {
-                return i.getTotal() 
-              }
-            }).call(this)
-          }
-        ).
-        reduce(
-          function(
-            lhs
-            ,
-            rhs
-          ) {
-            return (function inner() {
-              Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-              with(this) {
-                return lhs + rhs 
-              }
-            }).call(this)
-          }
-      ));
-      _b.push("</div>");
+    function anonymous(_s) {
+      var _b = [];
+      with(_s) {
+        _b.push("<div>");
+        _b.push(items.filter(
+            function(i) {
+              var _d = typeof _b === "undefined";
+              return (function inner(_b, _d) {
+                Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
+                with(this) {
+                  return i.position < item.position 
+                }
+                if (!_d) return "";
+                return _b.join("");
+              }).call(this, _d ? [] : _b, _d)
+            }
+          ).
+          map(
+            function(i) {
+              var _d = typeof _b === "undefined";
+              return (function inner(_b, _d) {
+                Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
+                with(this) {
+                  return i.getTotal() 
+                }
+                if (!_d) return "";
+                return _b.join("");
+              }).call(this, _d ? [] : _b, _d)
+            }
+          ).
+          reduce(
+            function(lhs, rhs) {
+              var _d = typeof _b === "undefined";
+              return (function inner(_b, _d) {
+                Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
+                with(this) {
+                  return lhs + rhs 
+                }
+                if (!_d) return "";
+                return _b.join("");
+              }).call(this, _d ? [] : _b, _d)
+            }
+        ));
+        _b.push("</div>");
+      }
+      return _b.join("");
     }
-    return _b.join("");
   </pre>
 </code>

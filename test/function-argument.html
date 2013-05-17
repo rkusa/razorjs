@@ -1,5 +1,5 @@
 <div>
-  @foobar(42, function(1, 2, 3) {
+  @foobar(42, function(a, b, c) {
     <strong>@foobar</strong>
     @foo.bar('1337')
   })
@@ -7,38 +7,33 @@
 
 <code>
   <pre>
-    var _b = [];
-    with(_s) {
-      _b.push("<div>");
-      _b.push(foobar(
-        42
-        ,
-        function(
-        1
-        ,
-        2
-        ,
-        3
-      ) {
-        var _d = typeof _b === "undefined";
-        return (function inner(_b, _d) {
-          Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-          with(this) {
-            _b.push("<strong>");
-            _b.push(foobar);
-            _b.push("</strong>");
-            _b.push(foo.bar(
-              '1337'
-            ));
-            _b.push("");
-          }
-          if (!_d) return "";
-          return _b.join("");
-        }).call(this, _d ? [] : _b, _d)
+    function anonymous(_s) {
+      var _b = [];
+      with(_s) {
+        _b.push("<div>");
+        _b.push(foobar(
+          42,
+          function(a, b, c) {
+          var _d = typeof _b === "undefined";
+          return (function inner(_b, _d) {
+            Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
+            with(this) {
+              _b.push("<strong>");
+              _b.push(foobar);
+              _b.push("</strong>");
+              _b.push(foo.bar(
+                '1337'
+              ));
+              _b.push("");
+            }
+            if (!_d) return "";
+            return _b.join("");
+          }).call(this, _d ? [] : _b, _d)
+        }
+        ));
+        _b.push("</div>");
       }
-      ));
-      _b.push("</div>");
+      return _b.join("");
     }
-    return _b.join("");
   </pre>
 </code>

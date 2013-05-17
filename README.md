@@ -2,9 +2,15 @@
 
 Experimental [Razor](http://razorengine.codeplex.com/)-like [PEG.js](https://github.com/dmajda/pegjs) template parser for Node.js.
 
-## Status
 
-Experimental, don't use yet.
+```json
+{
+  "name": "razorjs",
+  "version": "0.3.0"
+}
+```
+
+**Status:** Experimental, don't use yet.
 
 ## MIT License
 Copyright (c) 2012 Markus Ast

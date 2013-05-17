@@ -8,23 +8,25 @@
 
 <code>
   <pre>
-    var _b = [];
-    with(_s) {
-      if(
-        true
-      ) {
-        _b.push("<hr />");
+    function anonymous(_s) {
+      var _b = [];
+      with(_s) {
+        if(
+          true
+        ) {
+          _b.push("<hr />");
+        }
+        else if(
+          false
+        ) {
+          _b.push("<hr />");
+        }
+        else
+        {
+          _b.push("<hr />");
+        }
       }
-      else if(
-        false
-      ) {
-        _b.push("<hr />");
-      }
-      else
-      {
-        _b.push("<hr />");
-      }
+      return _b.join("");
     }
-    return _b.join("");
   </pre>
 </code>

@@ -6,18 +6,20 @@
 
 <code>
   <pre>
-    var _b = [];
-    with(_s) {
-      _b.push("<div>");
-      do{
-        _b.push("<hr />");
+    function anonymous(_s) {
+      var _b = [];
+      with(_s) {
+        _b.push("<div>");
+        do{
+          _b.push("<hr />");
+        }
+        while
+        (
+          true
+        )
+        _b.push("</div>");
       }
-      while
-      (
-        true
-      )
-      _b.push("</div>");
+      return _b.join("");
     }
-    return _b.join("");
   </pre>
 </code>

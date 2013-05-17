@@ -2,12 +2,14 @@
 
 <code>
   <pre>
-    var _b = [];
-    with(_s) {
-      _b.push("&lt;h1&gt;");
-      _b.push(title);
-      _b.push("&lt;/h1&gt;");
+    function anonymous(_s) {
+      var _b = [];
+      with(_s) {
+        _b.push("&lt;h1&gt;");
+        _b.push(title);
+        _b.push("&lt;/h1&gt;");
+      }
+      return _b.join("");
     }
-    return _b.join("");
   </pre>
 </code>

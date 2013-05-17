@@ -1,7 +1,6 @@
-var fs = require('fs')
-  , should = require('should')
-  , pegjs = require('pegjs')
-  , parser = pegjs.buildParser(fs.readFileSync(__dirname + '/../lib/parser/razorjs.pegjs', 'utf-8'))
+var fs      = require('fs')
+  , should  = require('should')
+  , razorjs = require('../lib/razorjs')
 
 describe('RazorJs', function() {
   var files = fs.readdirSync(__dirname)
@@ -27,13 +26,13 @@ describe('RazorJs', function() {
       
       // console.log(expected)
       
-      var parsed = parser.parse(template)
-      
-      // console.log(parsed)
+      var compiled = razorjs.compile(template).toString()
+      // console.log(compiled)
+      compiled = compiled.split('\n')
       
       for (var i = 0; i < expected.length; ++i)
-        expected[i].should.equal(typeof parsed[i] === 'string' ? parsed[i] : JSON.stringify(parsed[i]))
-      expected.should.have.lengthOf(parsed.length)
+        expected[i].should.equal(typeof compiled[i] === 'string' ? compiled[i] : JSON.stringify(compiled[i]))
+      expected.should.have.lengthOf(compiled.length)
     })
   })
 })

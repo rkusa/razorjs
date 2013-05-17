@@ -1,13 +1,13 @@
-<span>@{isDone ? a : b}</span>
+@section header {
+  <div></div>
+}
 
 <code>
   <pre>
     function anonymous(_s) {
       var _b = [];
       with(_s) {
-        _b.push("<span>");
-        _b.push(isDone ? a : b);
-        _b.push("</span>");
+        _b.push("");
       }
       return _b.join("");
     }

@@ -1,0 +1,37 @@
+@helper li(name, description) {
+  <li><b>@name</b> @description</li>
+}
+
+<ul>
+  @li('A', 'bcd')
+  @li('E', 'fgh')
+</ul>
+
+<code>
+  <pre>
+    function anonymous(_s) {
+      var _b = [];
+      with(_s) {
+        function li(
+          name,description
+        ) {
+          _b.push("<li><b>");
+          _b.push(name);
+          _b.push("</b> ");
+          _b.push(description);
+          _b.push("</li>");
+        }
+        _b.push("<ul>");
+        _b.push(li(
+          'A','bcd'
+        ));
+        _b.push("");
+        _b.push(li(
+          'E','fgh'
+        ));
+        _b.push("</ul>");
+      }
+      return _b.join("");
+    }
+  </pre>
+</code>
