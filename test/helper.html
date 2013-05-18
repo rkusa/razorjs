@@ -12,15 +12,13 @@
     function anonymous(_s) {
       var _b = [];
       with(_s) {
-        function li(
-          name,description
-        ) {
+        this.li = (function(name, description) {
           _b.push("<li><b>");
           _b.push(name);
           _b.push("</b> ");
           _b.push(description);
           _b.push("</li>");
-        }
+        }).bind(this);
         _b.push("<ul>");
         _b.push(li(
           'A','bcd'
