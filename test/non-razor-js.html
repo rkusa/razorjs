@@ -7,13 +7,13 @@
     function anonymous(_s) {
       var _b = [];
       with(_s) {
-        _b.push("<script>if (true) ");
+        _b.push("<script>\n  if (true) ");
         _b.push("{");
         _b.push(" alert(");
         _b.push(msg);
         _b.push(") ");
         _b.push("}");
-        _b.push("</script>");
+        _b.push("\n</script>");
       }
       return _b.join("");
     }

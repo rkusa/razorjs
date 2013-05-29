@@ -21,21 +21,21 @@
               _b.push(name);
               _b.push("</b> ");
               _b.push(description);
-              _b.push("</li>");
+              _b.push("</li>\n");
             }
             if (!_d) return "";
             return _b.join("");
           }).call(this, _d ? [] : _b, _d)
         }
-        _b.push("<ul>");
+        _b.push("\n\n<ul>\n  ");
         _b.push(li(
           'A','bcd'
         ));
-        _b.push("");
+        _b.push("\n  ");
         _b.push(li(
           'E','fgh'
         ));
-        _b.push("</ul>");
+        _b.push("\n</ul>");
       }
       return _b.join("");
     }

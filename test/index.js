@@ -10,7 +10,7 @@ describe('RazorJs', function() {
     it(file, function() {
       var contents = fs.readFileSync(__dirname + '/' + file, 'utf-8')
 
-      var template = contents.substr(0, contents.indexOf('<code>'))
+      var template = contents.substr(0, contents.indexOf('<code>')).replace(/[\n]*$/, '')
       // console.log(template)
       
       var pos = contents.indexOf('<pre>') + 5

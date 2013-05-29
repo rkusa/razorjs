@@ -9,7 +9,7 @@
     function anonymous(_s) {
       var _b = [];
       with(_s) {
-        _b.push("<ul>");
+        _b.push("<ul>\n  ");
         _b.push(todos.forEach(
           function(todo) {
             var _d = typeof _b === "undefined";
@@ -18,14 +18,14 @@
               with(this) {
                 _b.push("<li>");
                 _b.push(todo.task);
-                _b.push("</li>");
+                _b.push("</li>\n  ");
               }
               if (!_d) return "";
               return _b.join("");
             }).call(this, _d ? [] : _b, _d)
           }
         ));
-        _b.push("</ul>");
+        _b.push("\n</ul>");
       }
       return _b.join("");
     }
