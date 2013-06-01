@@ -14,22 +14,14 @@
         _b.push(foobar(
           42,
           function(a, b, c) {
-          var _d = typeof _b === "undefined";
-          return (function inner(_b, _d) {
-            Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-            with(this) {
-              _b.push("<strong>");
-              _b.push(foobar);
-              _b.push("</strong>\n    ");
-              _b.push(foo.bar(
-                '1337'
-              ));
-              _b.push("\n  ");
-            }
-            if (!_d) return "";
-            return _b.join("");
-          }).call(this, _d ? [] : _b, _d)
-        }
+            _b.push("<strong>");
+            _b.push(foobar);
+            _b.push("</strong>\n    ");
+            _b.push(foo.bar(
+              '1337'
+            ));
+            _b.push("\n  ");
+          }
         ));
         _b.push("\n</div>");
       }

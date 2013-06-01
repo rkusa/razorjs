@@ -10,41 +10,17 @@
         _b.push("<div>\n  ");
         _b.push(items.filter(
             function(i) {
-              var _d = typeof _b === "undefined";
-              return (function inner(_b, _d) {
-                Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-                with(this) {
-                  return i.position < item.position 
-                }
-                if (!_d) return "";
-                return _b.join("");
-              }).call(this, _d ? [] : _b, _d)
+              return i.position < item.position 
             }
           ).
           map(
             function(i) {
-              var _d = typeof _b === "undefined";
-              return (function inner(_b, _d) {
-                Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-                with(this) {
-                  return i.getTotal() 
-                }
-                if (!_d) return "";
-                return _b.join("");
-              }).call(this, _d ? [] : _b, _d)
+              return i.getTotal() 
             }
           ).
           reduce(
             function(lhs, rhs) {
-              var _d = typeof _b === "undefined";
-              return (function inner(_b, _d) {
-                Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-                with(this) {
-                  return lhs + rhs 
-                }
-                if (!_d) return "";
-                return _b.join("");
-              }).call(this, _d ? [] : _b, _d)
+              return lhs + rhs 
             }
         ));
         _b.push("\n</div>");

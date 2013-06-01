@@ -15,15 +15,7 @@
         if(
           ((isBoolean === (foo ? 1 :0))&& str === 'string')&& foobar(1,2)|| (
           function() {
-            var _d = typeof _b === "undefined";
-            return (function inner(_b, _d) {
-              Object.keys(inner.caller).forEach(function(key) { inner[key] = inner.caller[key]; });
-              with(this) {
-                _b.push("Boohja\n    ");
-              }
-              if (!_d) return "";
-              return _b.join("");
-            }).call(this, _d ? [] : _b, _d)
+            _b.push("Boohja\n    ");
           }
           ())
         ) {
