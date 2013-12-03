@@ -1,0 +1,17 @@
+<span>@{if(true) {
+  <strong>@foobar</strong>
+}}</span>
+
+<code>
+  <pre>
+    function anonymous(_s) {
+      var _b = [];
+      with(_s) {
+        _b.push("<span>");
+        if(true) {_b.push("<strong>");_b.push(foobar);_b.push("</strong>\n");}
+        _b.push("</span>");
+      }
+      return _b.join("");
+    }
+  </pre>
+</code>

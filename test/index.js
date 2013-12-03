@@ -2,7 +2,7 @@ var fs      = require('fs')
   , should  = require('should')
   , razorjs = require('../lib/razorjs')
 
-describe('RazorJs', function() {
+describe('Templates', function() {
   var files = fs.readdirSync(__dirname)
   files
   .filter (function(file) { return file.substr(-5) == '.html' })
