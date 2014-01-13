@@ -26,7 +26,7 @@ describe('Templates', function() {
       
       // console.log(expected)
       
-      var compiled = razorjs.compile(template).toString()
+      var compiled = razorjs.resolve(razorjs.compile(template)).toString()
       // console.log(compiled)
       compiled = compiled.split('\n')
       

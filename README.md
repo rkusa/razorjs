@@ -5,7 +5,7 @@ Experimental [Razor](http://razorengine.codeplex.com/)-like [PEG.js](https://git
 
 ```json
 { "name": "razorjs",
-  "version": "0.4.0" }
+  "version": "0.4.1" }
 ```
 
 **Status:** Experimental, don't use yet.
