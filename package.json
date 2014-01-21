@@ -1,16 +1,13 @@
 {
   "name": "razorjs",
-  "author": {
-    "name": "Markus Ast",
-    "email": "npm.m@rkusa.st"
-  },
   "version": "0.4.2",
-  "main": "lib/razorjs",
+  "author": "Markus Ast <npm.m@rkusa.st>",
+  "description": "Experimental Razor-like template parser for Node.js.",
+  "keywords": ["razor", "template", "templates", "parser", "express"],
   "homepage": "https://github.com/rkusa/razorjs",
+  "main": "lib/razorjs",
   "scripts": {
     "test": "mocha"
-  },
-  "dependencies": {
   },
   "devDependencies": {
     "mocha": "1.5.x",
@@ -21,5 +18,9 @@
   "repository" : {
     "type" : "git",
     "url" : "git://github.com/rkusa/razorjs.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
   }
 }
