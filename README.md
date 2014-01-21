@@ -1,12 +1,6 @@
-# RazorJS [![Build Status](https://secure.travis-ci.org/rkusa/razorjs.png)](http://travis-ci.org/rkusa/razorjs)
+# RazorJS [![NPM version][npm-img]][npm-url] [![Build Status][travis-img]][travis-url]
 
 Experimental [Razor](http://razorengine.codeplex.com/)-like [PEG.js](https://github.com/dmajda/pegjs) template parser for Node.js.
-
-
-```json
-{ "name": "razorjs",
-  "version": "0.4.1" }
-```
 
 **Status:** Experimental, don't use yet.
 
@@ -18,3 +12,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[npm-url]: https://npmjs.org/package/gulp
+[npm-img]: https://badge.fury.io/js/razorjs.png
+[travis-url]: https://travis-ci.org/rkusa/razorjs
+[travis-img]: https://travis-ci.org/rkusa/razorjs.png?branch=master
