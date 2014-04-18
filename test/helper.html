@@ -11,12 +11,13 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
         this.li = function(name, description) {
           _b.push("<li><b>");
-          _b.push(name);
+          _b.push(_e(name));
           _b.push("</b> ");
-          _b.push(description);
+          _b.push(_e(description));
           _b.push("</li>\n");
         }
         _b.push("\n\n<ul>\n  ");

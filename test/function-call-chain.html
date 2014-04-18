@@ -1,26 +1,27 @@
 <div>
-  @items.filter(function(i) { return i.position < item.position }).map(function(i) { return i.getTotal() }).reduce(function(lhs, rhs) { return lhs + rhs })
+  @items.filter(function(i) { return i.position < item.position}).map(function(i) { return i.getTotal()}).reduce(function(lhs, rhs) { return lhs + rhs})
 </div>
 
 <code>
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
         _b.push("<div>\n  ");
         _b.push(items.filter(
             function(i) {
-              return i.position < item.position 
+              return i.position < item.position
             }
           ).
           map(
             function(i) {
-              return i.getTotal() 
+              return i.getTotal()
             }
           ).
           reduce(
             function(lhs, rhs) {
-              return lhs + rhs 
+              return lhs + rhs
             }
         ));
         _b.push("\n</div>");

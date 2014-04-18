@@ -8,12 +8,13 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
         _b.push("<ul>\n  ");
         _b.push(todos.forEach(
           function(todo) {
             _b.push("<li>");
-            _b.push(todo.task);
+            _b.push(_e(todo.task));
             _b.push("</li>\n  ");
           }
         ));

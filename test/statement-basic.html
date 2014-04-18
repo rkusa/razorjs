@@ -8,14 +8,15 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
-        _b.push("&lt;div&gt;\n  ");
+        _b.push("<div>\n  ");
         if(
           isBoolean === true && str === 'string'
         ) {
           _b.push("YEAH!\n  ");
         }
-        _b.push("&lt;/div&gt;");
+        _b.push("</div>");
       }
       return _b.join("");
     }

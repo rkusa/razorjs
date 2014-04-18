@@ -12,24 +12,24 @@ describe('Templates', function() {
 
       var template = contents.substr(0, contents.indexOf('<code>')).replace(/[\n]*$/, '')
       // console.log(template)
-      
+
       var pos = contents.indexOf('<pre>') + 5
       var expected = contents.substr(
         pos,
         contents.indexOf('</pre>') - pos
-      ).replace(/&lt;/g, '<').replace(/&gt;/g, '>').split('\n')
+      )/*.replace(/&lt;/g, '<').replace(/&gt;/g, '>')*/.split('\n')
       for (var i = 0; i < expected.length; ++i) {
         expected[i] = expected[i].replace(/^[ \t]*/, '')
       }
       if (expected[0] === '') expected.shift()
       if (expected[expected.length - 1] === '') expected.pop()
-      
+
       // console.log(expected)
-      
+
       var compiled = razorjs.resolve(razorjs.compile(template)).toString()
       // console.log(compiled)
       compiled = compiled.split('\n')
-      
+
       for (var i = 0; i < expected.length; ++i)
         expected[i].should.equal(typeof compiled[i] === 'string' ? compiled[i] : JSON.stringify(compiled[i]))
       expected.should.have.lengthOf(compiled.length)

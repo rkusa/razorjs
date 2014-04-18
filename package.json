@@ -1,6 +1,6 @@
 {
   "name": "razorjs",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "author": "Markus Ast <npm.m@rkusa.st>",
   "description": "Experimental Razor-like template parser for Node.js.",
   "keywords": ["razor", "template", "templates", "parser", "express"],

@@ -4,10 +4,11 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
-        _b.push("&lt;h1&gt;");
-        _b.push(title);
-        _b.push("&lt;/h1&gt;");
+        _b.push("<h1>");
+        _b.push(_e(title));
+        _b.push("</h1>");
       }
       return _b.join("");
     }

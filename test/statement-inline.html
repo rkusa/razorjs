@@ -4,9 +4,10 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
         _b.push("<input type=\"checkbox\" ");
-        _b.push(isChecked? 'checked' :'');
+        _b.push(_e(isChecked? 'checked' :''));
         _b.push(">");
       }
       return _b.join("");

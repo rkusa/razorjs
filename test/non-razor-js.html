@@ -6,11 +6,12 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
         _b.push("<script>\n  if (true) ");
         _b.push("{");
         _b.push(" alert(");
-        _b.push(msg);
+        _b.push(_e(msg));
         _b.push(") ");
         _b.push("}");
         _b.push("\n</script>");

@@ -6,9 +6,10 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
+      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
       with(_s) {
         _b.push("<span>");
-        if(true) {_b.push("<strong>");_b.push(foobar);_b.push("</strong>\n");}
+        if(true) {_b.push("<strong>");_b.push(_e(foobar));_b.push("</strong>\n");}
         _b.push("</span>");
       }
       return _b.join("");
