@@ -11,7 +11,7 @@
   <pre>
     function anonymous(_s) {
       var _b = [];
-      var _e = function(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
+      var _e = function(v) { return v ? v.toString().replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : v };
       with(_s) {
         this.li = function(name, description) {
           _b.push("<li><b>");
